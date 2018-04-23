@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+body{
+	line-height: 1.5;
+	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    color: #444;
+    text-align: justify;
+    background-color: #fff;
+    font-family: 'Poiret One', cursive; 
+}
+.content{
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*
+HEADER
+*/
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	background-color: #d0e9ed;
+
+}
+header h1{
+	text-align: center;
+}
+/*
+LED_CONTROL
+*/
+section{
+	width: 100%;
+}
+#led_control{
+	display: flex;
+	flex-direction: column;
+	padding: 0 0;
+	background-color: rgba(221,221,232,0.5);
+	/*#94B6C6*/
+	padding: 10px 0;
+	align-items: center;
+}
+#led{
+
+	width: 169px;
+	height: 222px;
+}
+/*
+BUTTON
+*/
+#on_off{
+	border: none;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: 900;
+	background-color: #0c4c8a;
+	color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+/*
+ABOUT
+*/
+#about{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: #d0e9ed;
+}
+#about h2{
+	text-align: center;
+	font-weight: 900;
+	font-size: 1.5em;
+}
+#about p{
+	width: 80%;
+	font-size: 1.0em;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: 600;
+}
+#about a{
+	color: #0c4c8a;
+}
+/*
+FOOTER
+*/
+footer{
+	background-color: #4d4d4d;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: #f1f1f1;
+}
+footer p{
+	color: #f1f1f1;
+	font-weight: 700;
+}
+footer ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0;
+	text-align: center;
+}
+footer li{
+	text-align: center;
+	list-style: none;
+	width: 50%;
+}
+footer a{
+	text-decoration: none;
+	color: #f1f1f1;
+}
+
+/*
+MEDIA QUERIES
+*/
+@media screen and (min-width: 768px){
+	#on_off{
+		width: 15%;
+	}
+	footer{
+		flex-direction: row;
+		padding: 0 300px;
+	}
+	footer ul{
+		width: 50%;
+		padding: 0 0;
+	}
+	footer p{
+		width: 50%;
+	}
+	footer li{
+		padding: 0 0;
+	}
+}

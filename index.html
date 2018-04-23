@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LED Blink</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="content">
+		<header>
+			<h1>LED Blink</h1>
+		</header>
+		<section id="led_control">
+			<img src="images/lamp_off.png" id="led">
+			<button id="on_off">On/Off</button>
+		</section>
+		<section id="about">
+			<h2>About this page</h2>
+			<p>
+				Simple IOT web page application using Arduino, Firebase and Johnny-Five. It controls a basic Arduino Led Blink circuit (<a href="http://johnny-five.io/img/breadboard/led-13.png" target="_blank">here</a>)).
+			</p>
+			<p>
+				<a href="" target="_blank">Source code</a>.
+			</p>
+		</section>
+		
+	</div>
+	<footer id="footer">
+		<ul>
+			<li><a href="https://github.com/fernandaagr" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+			<li><a href="https://codepen.io/fearaujogr/" target="_blank"><i class="fa fa-codepen fa-2x"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/fernanda-rodrigues-9a0a9b154/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+		</ul>
+		<p>Coded by Fernanda Rodrigues. Copyright &copy 2017. All Rights Reserved.</p>
+	</footer>
+	<!-- include firebase and jquery library-->
+	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		//create a reference to firebase database
+		var myFirebaseRef = new Firebase("https://testing-8e65b.firebaseio.com/buttons/");
+		var ledState;
+		//when the page is loaded and ready
+  		$(document).ready(function(){
+  			//wait info from firebase and get the value to ledState
+			myFirebaseRef.on("value", function(snapshot) {
+			    ledState = snapshot.val();
+			});
+			//wait event click on the On/Off button
+			$('#on_off').click(function(){
+				if (ledState == "on"){
+					//set value on database
+					myFirebaseRef.set("off");
+					//change image
+					$("#led").attr('src', 'images/lamp_off.png');
+				}else{
+					myFirebaseRef.set("on");
+					$("#led").attr('src', 'images/lamp_on.png');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

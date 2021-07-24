@@ -1,16 +1,48 @@
+/*Custome variables*/
+:root{
+	--clr-primary-100: #f1f1f1;
+	--clr-primary-200: #d0e9ed;
+    --clr-primary-300: #dddde8;
+	--clr-primary-500: #0c4c8a;
+	--clr-primary-900: #4d4d4d;
+ 	--crl--neutral-100: #fff;
+
+	--ff-primary: 'Poiret One', cursive;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 body{
 	line-height: 1.5;
-	/*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-    color: #444;
+	color: var(--clr-primary-900);
     text-align: justify;
-    background-color: #fff;
-    font-family: 'Poiret One', cursive; 
+    font-family: var(--ff-primary); 
 }
-.content{
-	background-color: #fff;
-	margin-left: auto;
-	margin-right: auto;
+body,
+h1, 
+h2,
+p {
+    margin: 0;
+}
+h1, h2, h3 {
+    color: var(--clr-primary-900);
+    font-family: var(--ff-primary);
+    font-weight: 900;
+    line-height: 1;
+}
+h2, p {
+    margin-bottom: 1em;
+}
+header,
+section{
+    padding: 4rem 0;
+}
+
+@media (min-width: 40em){
+
 }
 /*
 HEADER
@@ -21,7 +53,7 @@ header{
 	align-items: center;
 	text-align: center;
 	width: 100%;
-	background-color: #d0e9ed;
+	background-color: var(--clr-primary-200);
 
 }
 header h1{
@@ -37,7 +69,7 @@ section{
 	display: flex;
 	flex-direction: column;
 	padding: 0 0;
-	background-color: rgba(221,221,232,0.5);
+	background-color: var(--clr-primary-300);
 	/*#94B6C6*/
 	padding: 10px 0;
 	align-items: center;
@@ -56,8 +88,8 @@ BUTTON
 	margin-right: auto;
 	margin-left: auto;
 	font-weight: 900;
-	background-color: #0c4c8a;
-	color: white;
+	background-color: var(--clr-primary-500);
+	color: var(--crl--neutral-100);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -72,7 +104,7 @@ ABOUT
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	background-color: #d0e9ed;
+	background-color: var(--clr-primary-200);
 }
 #about h2{
 	text-align: center;
@@ -93,16 +125,16 @@ ABOUT
 FOOTER
 */
 footer{
-	background-color: #4d4d4d;
+	background-color: var(--clr-primary-900);
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	color: #f1f1f1;
+	color: var(--clr-primary-100);
 }
 footer p{
-	color: #f1f1f1;
+	color: var(--clr-primary-100);
 	font-weight: 700;
 }
 footer ul{
@@ -119,7 +151,7 @@ footer li{
 }
 footer a{
 	text-decoration: none;
-	color: #f1f1f1;
+	color: var(--clr-primary-100);
 }
 
 /*

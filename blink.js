@@ -1,4 +1,4 @@
-//variable declaration and modules requires
+//variable declaration and modules required
 var five = require("johnny-five"),
   board, led;
 var Firebase = require("firebase");

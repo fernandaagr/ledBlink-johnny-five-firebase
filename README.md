@@ -1,7 +1,7 @@
 # ledBlink-johnny-five-firebase
 ## Simple ledBlink IoT application using johnny-five and firebase
 
-https://codepen.io/fearaujogr/full/BxoxwZ/
+out of date - https://codepen.io/fearaujogr/full/BxoxwZ/
 
 ## Setup:
 1) Node.js;
